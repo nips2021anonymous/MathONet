@@ -2,23 +2,20 @@
 this dataset is with the selection for convlutional stencil 
 """
 
-import algorithm_lz_depend_v4 as Algorithm
-import model_node as md
 from scipy.io import savemat
-import scipy.io as scio
 import torch
 import numpy as np
 
 #import datetime
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 from scipy.integrate import odeint
-from scipy.sparse import diags
 if __name__ == '__main__':  # multi-processing protection
     folder_save_data = './' +'data/'  # the folder to save result            	 
     sigma = 10  # Lorenz's parameters (chaotic)
     beta = 8/3
     rho = 28
     noise = 0.01
+    
 
     def lorenz(u,t):
         y1,y2,y3 = u

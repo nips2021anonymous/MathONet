@@ -11,6 +11,7 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 def clean_data(estimation_input, estimation_output, validation_input, onoff_normalize_data):
     """this part is used to normalize data"""
     std_y_train, mean_y_train = 1, 0
+    
     #normalize estimation_data
     # train_number = int(estimation_input.shape[0])
     X_train = estimation_input.to(DEVICE)

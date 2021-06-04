@@ -16,9 +16,10 @@ class PolyNet(nn.Module):
         x = x_new.float().to(self.save_device)
         x = self.linear_0(x)		
         del x_new
+        
         return x
 
-
+ 
 class OperNet(nn.Module):
     """"""
     def __init__(self, unary_names, save_device=torch.device('cpu')):

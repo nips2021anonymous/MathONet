@@ -1,6 +1,6 @@
 # MathONet
 
-This repository is the official implementation of [Bayesian Learning to Discover Mathematical Operations in Governing Equations of Dynamic Systems]
+This repository is the implementation of [Bayesian Learning to Discover Mathematical Operations in Governing Equations of Dynamic Systems]
 
 ## Description
 

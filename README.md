@@ -4,7 +4,7 @@ This repository is the implementation of [Bayesian Learning to Discover Mathemat
 
 ## Description
 
-This paper works on...
+This paper presents a method that can learn the mathematical operations in governing equations of dynamic systems composed of the basic mathematical operations, i.e., unary and binary operations. The governing equations are formulated as a DenseNet-like hierarchical structure, termed as MathONet. The algorithm is demonstrated on the chaotic Lorenz system, Lotka-Volterra system and Kolmogorov–Petrovsky–Piskunov (Fisher-KPP) system. 
 
 ## Requirements
 
@@ -14,14 +14,20 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
+## Generate data
 
-## Training
-
-To train the model(s) in the paper, run this command:
+To generate data for each benchmark run this command in each folder:
 
 ```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+python data_generate.py
+```
+
+## Training and Evaluation
+
+To train and evaluate the model(s) in the paper, run this command in each folder:
+
+```train
+python main.py
 ```
 
 >📋  Several hyperparameters needs to be defined in the train.py, including: 
@@ -30,13 +36,3 @@ python train.py --input-data <path_to_data> --alpha 10 --beta 20
 3. Value of regularization paramater;  
 4. Number of repeated experiments from random initialization with same MathONet structure and regularization parameter. 
 
-## Evaluation
-
-To evaluate my model
-
-```eval
-python eval.py
-```
-
-## Identified Optimal MathONet Models in the paper:
-You can find the identified MathONet models for each dynamic system in this folder. 

@@ -17,6 +17,7 @@ class MLP_Algorithm:
         self.alpha = {}
         self.sum_gamma = {} 
         
+        
         for name, value in model.state_dict().items():   			
             self.gamma[name + '_group'] = torch.ones(value.size(), dtype=torch.float32, device=self.device)
             self.omega[name + '_group'] = torch.ones(value.size(), dtype=torch.float32, device=self.device)

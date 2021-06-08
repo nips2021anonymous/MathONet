@@ -190,8 +190,8 @@ class MathONet(nn.Module):
         x2 = copy.deepcopy(x)
         x2 = self.ConvNet(x2)
         x2 = x2.squeeze() # turn output: x3 from 4-D form into 2-D form  
-        result = x1.to(self.save_device)+x2.to(self.save_device)
-        return result, x1, x2
+        output = x1.to(self.save_device)+x2.to(self.save_device)
+        return output, x1, x2 
      
             
                 
